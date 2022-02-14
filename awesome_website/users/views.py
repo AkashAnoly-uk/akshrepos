@@ -819,6 +819,9 @@ def project_close(request):
 # git remote set-url origin https://github.com/AkashAnoly-uk/employee.git
                             # https://github.com/AkashAnoly-uk/employee
 
+                            # git remote add origin ssh://github.com/AkashAnoly-uk/akashemps
+                            # git clone git@github.com:AkashAnoly-uk/akashemps%.git
+
 # sudo mysql -p -u root
 
 # CREATE USER 'USERNAME'@'%' IDENTIFIED BY 'PASSWORD';
