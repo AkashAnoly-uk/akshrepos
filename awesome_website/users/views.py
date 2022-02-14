@@ -820,7 +820,19 @@ def project_close(request):
                             # https://github.com/AkashAnoly-uk/employee
 
                             # git remote add origin ssh://github.com/AkashAnoly-uk/akashemps
-                            # git clone git@github.com:AkashAnoly-uk/akashemps%.git
+                            # git clone git@github.com:AkashAnoly-uk/akashemps.git
+                            # git clone git@github.com:AkashAnoly-uk/employee.git
+
+                            # git remote add origin ssh://github.com/AkashAnoly-uk/akashemps
+
+                            # git remote add origin ssh://git@github.com:AkashAnoly-uk/employee.git
+
+
+                            # git clone https://github.com/AkashAnoly-uk/employee.git
+                           #  https://github.com/AkashAnoly-uk/employee.git
+                           # git clone https://github.com/AkashAnoly-uk/employee/tree/master
+
+                            # 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
 
 # sudo mysql -p -u root
 
