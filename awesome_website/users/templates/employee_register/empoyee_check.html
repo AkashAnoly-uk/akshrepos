@@ -1,0 +1,36 @@
+{% extends "employee_register/base.html" %}
+
+
+{% block content %}
+<h1><u>Select to make Inactive</u></h1>
+
+
+
+
+
+<form action = "" method = "POST">
+    {% csrf_token %}
+    {% for data in dataset %}
+    <input type="checkbox" name="recommendations" id="{{ data.id }}"  value="{{ data.id }}" />
+    <label for="{{ data.id }}"><b>{{data.mobile}}----{{data.full_name}} </b></label><br />
+    {% endfor %}
+    <input type="submit" value="Submit" class="btn btn-info" >
+
+
+
+    <!-- <div class="col-md-8" style="margin-left: 100px;margin-top: -37px;">
+            <a href="{% url 'check_inac' %}" class="btn btn-info">
+                <i class="fas fa-stream"></i> Absent list
+            </a>
+        </div>     -->  
+</form>
+
+
+                    
+                  
+                           
+
+
+  
+
+{% endblock content %}

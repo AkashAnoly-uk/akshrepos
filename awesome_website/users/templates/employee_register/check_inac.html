@@ -1,0 +1,54 @@
+{% extends "employee_register/base.html" %}
+
+
+{% block content %}
+<h1><u>Inactive(Absent) LIST</u></h1>
+
+
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        
+        <tr>
+            <td>FULL NAME</td>
+            <td>Mobile</td>
+        </tr>
+            
+                {% for data in dataset %}
+ 
+         <tbody>
+
+                    <tr>     
+                        
+                          <td> {{data.full_name}}</td>
+                          <td> {{data.mobile}}</td>
+                             
+                    </tr>
+                         
+                {% endfor %}             
+
+    </tbody>
+
+
+    </thead>
+</table>
+
+ <div class="col-md-4" >
+            <a href="{% url 'empoyee_check' %}" class="btn btn-info">
+                <i class="fas fa-stream"></i> Back to Active 
+            </a>
+        </div>   
+
+
+
+
+
+
+
+                    
+                  
+                           
+
+
+  
+
+{% endblock content %}

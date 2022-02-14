@@ -1,0 +1,231 @@
+{% extends "employee_register/base.html" %}
+
+
+{% block content %}
+
+   
+<h2 style="color: teal;"><u>ASSIGNED PERSONS LIST [ {{date}}  ]</u></h2>
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+  
+.column {
+  float: left;
+  width: 45%;
+  padding: 0px;
+}
+.columnsn {
+  float: left;
+  width: 30%;
+  /*padding: 0px;*/
+  margin-left:-130px ;
+}
+.columns {
+  float: left;
+  width: 20%;
+  /*padding: -5px;*/
+  margin-left: -90px;
+}
+.columnsm {
+  float: left;
+  width: 30%;
+  /*padding: 0px;*/
+  margin-left:-60px ;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 70%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  font-size: 13px;
+  padding: 4px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
+
+
+
+
+
+<div class="row">
+  <div class="column">
+    <table>
+      <tr>
+        <th>FULL NAME</th>
+        <th>MOBILE</th>
+        
+      </tr>
+      {% for data in emp_det %}
+      
+      <tr>
+        <td>{{data.full_name}}</td>
+        <td>{{data.mobile}}</td>
+      {% endfor %}  
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div class="columnsn">
+    <table class="projs">
+      <tr>
+        <th>Project Name</th>
+        
+        
+      </tr>
+       {% for datapr in proj_name %}  
+      <tr>
+        <td>{{datapr}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+  
+  <div class="columns">
+    <table>
+      <tr>
+        <th>Platform Name</th>
+        
+        
+      </tr>
+       {% for datapl in pla_name %}  
+      <tr>
+        <td>{{datapl}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+  <div class="columnsm">
+    <table>
+      <tr>
+        <th>TeamLeader Name</th>
+        
+        
+      </tr>
+       {% for tl in tl_fulname %}  
+      <tr>
+        <td>{{tl}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+
+  
+       
+        <div class="col-md-8" ><br>
+            <a href="{% url 'assign_task' %}" class="btn btn-info">
+                <i class="fas fa-stream"></i> BACK TO---ASSSIGN TASK
+            </a>
+        </div> 
+
+         <div class="col-md-8" ><br>
+            <a href="{% url 'assign_previous' %}" class="btn btn-info">
+                <i class="fas fa-stream"></i> BACK TO---YESTERDAY TASK
+            </a>
+        </div>      
+       
+     
+
+</div>
+<br>
+<br>
+<br>
+
+<h2 style="color:deepskyblue;"><u>RE--ASSIGNED PERSON LIST [ {{date}}  ]</u></h2>
+
+<div class="row">
+  <div class="column">
+    <table>
+      <tr>
+        <th>FULL NAME</th>
+        <th>MOBILE</th>
+        
+      </tr>
+      {% for datan in ressignm_det %}
+      
+      <tr>
+        <td>{{datan.full_name}}</td>
+        <td>{{datan.mobile}}</td>
+      {% endfor %}  
+      </tr>
+      
+    </table>
+  </div>
+  
+  <div class="columnsn">
+    <table>
+      <tr>
+        <th>Project Name</th>
+        
+        
+      </tr>
+       {% for datapre in se_proj %}  
+      <tr>
+        <td>{{datapre}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+  
+  <div class="columns">
+    <table>
+      <tr>
+        <th>Platform Name</th>
+        
+        
+      </tr>
+       {% for datapll in se_plat %}  
+      <tr>
+        <td>{{datapll}}</td>
+      </tr>
+      {% endfor %} 
+    </table>
+  </div>
+
+       
+        <div class="col-md-8" ><br>
+            <a href="{% url 'reassign_task' %}" style="color:whitesmoke;" class="btn btn-info">
+                <i class="fas fa-stream"></i> BACK TO RE--ASSIGN TASK
+            </a>
+        </div>    
+       
+     
+
+</div>
+
+
+
+
+
+
+                    
+                  
+                           
+
+
+  
+
+{% endblock content %}

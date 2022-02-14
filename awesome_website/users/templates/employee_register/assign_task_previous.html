@@ -1,0 +1,117 @@
+{% extends "employee_register/base.html" %}
+
+
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+
+<h2><b><u>Assign Task From Yesterday Date [{{date}}]</u></ul><b></h2>
+
+
+
+<table class="table table-borderless">
+  <thead class="border-bottom font-weight-bold">
+        <tr>
+            
+            <td>FULL NAME</td>
+            <td>PROJECTS</td>
+          
+         
+                
+        </tr>
+        
+  </thead>
+
+    <tbody>
+        <form action="" method="post" autocomplete="off">
+        {% csrf_token %}
+           
+                
+                    {% for name in active_emp %}
+
+                             
+                       <tr>     
+                          <td>
+                             
+                              <div>
+                                <input type="checkbox" id="fname" name="interest" value="{{name.id}}">
+                                <label for="coding">{{name.full_name}}-----{{name.mobile}}</label>
+                              </div>
+                        </td>
+                        
+                             
+                    {% endfor %}
+                      
+<!-- 
+                           <td> <div>
+                                <input type="checkbox" id="projname" name="interest" value="{{proj.id}}">
+                                <label for="music">{{proj.project_name}}----{{proj.platform_name}}</label>
+                              </div>
+                          </td> -->
+
+ <!-- <td>  -->
+    
+      
+  <!-- </td> -->                 
+
+                    
+
+
+                      </tr>
+
+                
+
+                      
+               <!--  <p><label for="id_platform_name">Platform name:</label>      -->
+                <h3>Projects</h3>
+                
+                <select name="options" id="select-state" placeholder="Select An Option..." style="width: 400px;height:30px;">
+                    
+                    <option value = 'none'>Select an Option</option>
+                        {% for proj in emp_proj %}
+                        <ul>
+                              <option value="{{proj.id}}" >{{proj.project_name}}------{{proj.platform_name}}</option>
+                        </ul> 
+                            
+                        {% endfor %}
+                            
+                     
+      </select>
+      <input type="submit" value="Submit" class="btn btn-info" >
+                </form>
+            
+    </tbody>
+
+
+      <div class="col-md-4" style="margin-left: 100px;margin-top:0px;">
+            <a href="{% url 'assigned' %}" class="btn btn-info">
+                <i class="fas fa-stream"></i> Assigned Person
+            </a>
+        </div>
+        
+   <!--    <div class="col-md-4" style="margin-left: 100px;margin-top:10px;">
+            <a href="{% url 'assign_task' %}" class="btn btn-info">
+                <i class="fas fa-stream"></i> ASSIGN--TASK
+            </a>
+        </div>    -->     
+</form>
+    
+</table>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+      $('select').selectize({
+          sortField: 'text'
+      });
+  });
+
+  /*function autoRefresh() {
+        window.location = window.location.href;
+    }
+    setInterval('autoRefresh()', 5000);*/
+ </script>   
+
+
+{% endblock content %}
