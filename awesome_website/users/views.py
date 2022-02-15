@@ -835,7 +835,14 @@ def project_close(request):
 # git remote set-url origin https://github.com/AkashAnoly-uk/employee.git
                             # https://github.com/AkashAnoly-uk/employee
 
+# git remote set-url origin https://scuzzlebuzzle:<MYTOKEN>@github.com/scuzzlebuzzle/ol3-1.git
+
+# git remote set-url origin ssh://git@github.com:AkashAnoly-uk/akshrepos.git
+
+
+
                             # git remote add origin ssh://github.com/AkashAnoly-uk/akashemps
+                            # git remote add origin ssh://github.com:AkashAnoly-uk/akshrepos.git
                             # git clone git@github.com:AkashAnoly-uk/akashemps.git
                             # git clone git@github.com:AkashAnoly-uk/employee.git
                             # git clone git@github.com:Utshuk/Django.git
