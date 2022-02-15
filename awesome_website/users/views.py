@@ -778,7 +778,12 @@ def project_close(request):
 # https://www.youtube.com/watch?v=JVFH8fuR4l0
 # https://www.youtube.com/watch?v=JVFH8fuR4l0
 
+# https://www.youtube.com/watch?v=qSjSn620vhI
+# Newparts
+
 # chmod 400 ec2_key.pem        
+
+# ssh -i "akash_e2c_key.pem" ubuntu@ec2-52-22-227-158.compute-1.amazonaws.com
 
 
 # CREATE USER 'root'@'%' IDENTIFIED BY 'root';
@@ -793,18 +798,29 @@ def project_close(request):
 # sudo /etc/init.d/apache2 restart
 
 # sudo service apache2 status
-
+# sudo apt-get install php-fpm php-mysql
 # sudo apt-get install phpmyadmin
 # sudo apt-get install libapache2-mod-php
+# sudo ln -s /usr/share/phpmyadmin /var/www/html
+# sudo systemctl restart nginx
 
+# sudo nano /etc/nginx/sites-available/default
+# sudo systemctl reload nginx
 # sudo ln -s /usr/share/phpmyadmin /var/www/html
 
 
 # CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 # GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 
+# rm -r akashemps
+
+
 # sudo apt install git-all
 # FLUSH PRIVILEGES;
+
+
+
+# sudo ln -s /usr/share/phpmyadmin /var/www/52.22.227.158/phpmyadmin
 
 # https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to
 
@@ -822,6 +838,8 @@ def project_close(request):
                             # git remote add origin ssh://github.com/AkashAnoly-uk/akashemps
                             # git clone git@github.com:AkashAnoly-uk/akashemps.git
                             # git clone git@github.com:AkashAnoly-uk/employee.git
+                            # git clone git@github.com:Utshuk/Django.git
+
 
                             # git remote add origin ssh://github.com/AkashAnoly-uk/akashemps
 
@@ -832,7 +850,9 @@ def project_close(request):
                            #  https://github.com/AkashAnoly-uk/employee.git
                            # git clone https://github.com/AkashAnoly-uk/employee/tree/master
 
-                            # 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
+                            # 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
+
+                            # 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  akashDjango new tokkens
 
 # sudo mysql -p -u root
 
